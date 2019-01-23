@@ -10,16 +10,76 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"*"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
+				"command": "uihelper.test",
+				"title": "uihelper=>test",
+				"category":"test"
+			},
+			{
+				"command": "uihelper.test1",
+				"title": "uihelper=>test1",
+				"category":"test"
 			}
-		]
+		],
+		"keybindings": [{
+			"command": "uihelper.test",
+			"key": "ctrl+.",
+			"mac": "cmd+."
+		}],
+		"configuration": {
+			"type": "object",
+			"title": "uihelper configuration",
+			"properties": {
+				"uihelper.tangxuelei": {
+					"type": "string",
+					"default": "汤雪磊",
+					"description": "汤雪磊是谁"
+				}
+			}
+		},
+		"menus": {
+			"explorer/context": [{
+				"command": "uihelper.test",
+				"alt": "uihelper.test",
+				"group": "navigation"
+			}],
+			"editor/context": [{
+				"command": "uihelper.test",
+				"alt": "uihelper.test",
+				"group": "navigation"
+			}],
+			"editor/title/context": [{
+				"command": "uihelper.test",
+				"alt": "uihelper.test",
+				"group": "navigation"
+			}]
+		},
+		"viewsContainers": {
+            "activitybar": [
+                {
+                    "id": "package-explorer",
+                    "title": "Package Explorer",
+                    "icon": "/src/static/uihelper.svg"
+                }
+            ]
+        },
+        "views": {
+            "package-explorer": [
+                {
+                    "id": "package-dependencies",
+                    "name": "Dependencies"
+                },
+                {
+                    "id": "package-outline",
+                    "name": "Outline"
+                }
+            ]
+        }
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
