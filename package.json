@@ -2,6 +2,7 @@
 	"name": "uihelper",
 	"displayName": "uihelper",
 	"description": "",
+	"publisher":"tangxuelei888",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.30.0"
