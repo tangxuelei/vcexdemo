@@ -1,11 +1,15 @@
 import * as vscode from "vscode";
 import { window } from "vscode";
-
+import UIHelper from "./uihelper";
 
 var ochannel = vscode.window.createOutputChannel("uihelper日志");
 export function activate(context: vscode.ExtensionContext) {
+  var uihelper=new UIHelper();
+
   context.subscriptions.push(
     vscode.commands.registerCommand("uihelper.test", async () => {
+      uihelper.run();
+
       //弹框
       //vscode.window.showInformationMessage("Hello World!");
       //   vscode.window.showErrorMessage("error world");
