@@ -18,19 +18,21 @@
 			{
 				"command": "uihelper.test",
 				"title": "uihelper=>test",
-				"category":"test"
+				"category": "test"
 			},
 			{
 				"command": "uihelper.test1",
 				"title": "uihelper=>test1",
-				"category":"test"
+				"category": "test"
 			}
 		],
-		"keybindings": [{
-			"command": "uihelper.test",
-			"key": "ctrl+.",
-			"mac": "cmd+."
-		}],
+		"keybindings": [
+			{
+				"command": "uihelper.test",
+				"key": "ctrl+.",
+				"mac": "cmd+."
+			}
+		],
 		"configuration": {
 			"type": "object",
 			"title": "uihelper configuration",
@@ -43,43 +45,49 @@
 			}
 		},
 		"menus": {
-			"explorer/context": [{
-				"command": "uihelper.test",
-				"alt": "uihelper.test",
-				"group": "navigation"
-			}],
-			"editor/context": [{
-				"command": "uihelper.test",
-				"alt": "uihelper.test",
-				"group": "navigation"
-			}],
-			"editor/title/context": [{
-				"command": "uihelper.test",
-				"alt": "uihelper.test",
-				"group": "navigation"
-			}]
+			"explorer/context": [
+				{
+					"command": "uihelper.test",
+					"alt": "uihelper.test",
+					"group": "navigation"
+				}
+			],
+			"editor/context": [
+				{
+					"command": "uihelper.test",
+					"alt": "uihelper.test",
+					"group": "navigation"
+				}
+			],
+			"editor/title/context": [
+				{
+					"command": "uihelper.test",
+					"alt": "uihelper.test",
+					"group": "navigation"
+				}
+			]
 		},
 		"viewsContainers": {
-            "activitybar": [
-                {
-                    "id": "package-explorer",
-                    "title": "Package Explorer",
-                    "icon": "/src/static/uihelper.svg"
-                }
-            ]
-        },
-        "views": {
-            "package-explorer": [
-                {
-                    "id": "package-dependencies",
-                    "name": "Dependencies"
-                },
-                {
-                    "id": "package-outline",
-                    "name": "Outline"
-                }
-            ]
-        }
+			"activitybar": [
+				{
+					"id": "package-explorer",
+					"title": "Package Explorer",
+					"icon": "/src/static/uihelper.svg"
+				}
+			]
+		},
+		"views": {
+			"package-explorer": [
+				{
+					"id": "package-dependencies",
+					"name": "Dependencies"
+				},
+				{
+					"id": "package-outline",
+					"name": "Outline"
+				}
+			]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
