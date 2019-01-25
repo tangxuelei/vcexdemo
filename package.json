@@ -1,13 +1,21 @@
 {
 	"name": "uihelper",
 	"displayName": "uihelper",
-	"description": "",
-	"publisher":"tangxuelei888",
-	"version": "0.0.1",
+	"description": "a util for code the user interface simpleness,efficient and so on!",
+	"keywords": [
+		"html",
+		"css",
+		"scss",
+		"html2css",
+		"html2scss"
+	  ],
+	"publisher": "tangxuelei",
+	"version": "0.0.3",
 	"engines": {
 		"vscode": "^1.30.0"
 	},
 	"categories": [
+		"Programming Languages",
 		"Other"
 	],
 	"activationEvents": [

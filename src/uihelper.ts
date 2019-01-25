@@ -13,7 +13,7 @@ export default class UIHelper {
   }
   private _alert(obj: string) {
     vscode.window.showErrorMessage(
-      `${obj}\nwant some help?link me!\nemail:tangxuele888@gmail.com`,
+      `${obj}\nwant some help?link me!\nemail:tangxuelei888@gmail.com`,
       { modal: true }
     );
   }
