@@ -9,8 +9,9 @@
 		"html2css",
 		"html2scss"
 	],
+	"icon": "images/icon.png",
 	"publisher": "tangxuelei",
-	"version": "0.0.9",
+	"version": "0.0.10",
 	"engines": {
 		"vscode": "^1.30.0"
 	},

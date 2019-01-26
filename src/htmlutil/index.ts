@@ -31,10 +31,11 @@ class HtmlUtil {
         return `#${id.value}`;
       }
       if(cls){
-        return `${node.tagName}.${cls.value}`;
+        return `${node.nodeName}.${cls.value}`;
       }
+      return `${node.nodeName}`;
     }else{
-      return `${node.tagName}`;
+      return `${node.nodeName}`;
     }
   }
   private _toscss(nodes:Array<iHtmlnode>): string {
