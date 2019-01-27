@@ -1,4 +1,4 @@
-import { window } from "vscode";
+import { window, workspace } from "vscode";
 import * as fs from "fs";
 import HtmlUtil from "./htmlutil";
 import { alert, warn } from "./util";
@@ -7,8 +7,7 @@ export default class UIHelper {
   constructor() {
     
   }
-
-  html2scss() {
+  async html2scss() {
     var editor = window.activeTextEditor;
     var filetypes=['html','htm','jsp','php','vue','jsx','tsx','wxml','javascriptreact','typescriptreact'];
     if (!editor) {
@@ -17,8 +16,6 @@ export default class UIHelper {
     if (editor.selection.isEmpty) {
       return alert("you may not select any xml like code");
     }
-    console.log(editor.document.languageId);
-    
     if (filetypes.indexOf(editor.document.languageId)==-1) {
       return alert(`you may not select any xml like code,\nsupprot filetype ${filetypes.map(i=>'*.'+i).join(' ')}`);
     }
@@ -27,6 +24,10 @@ export default class UIHelper {
       editor.document.uri.fsPath + ".scss",
       new HtmlUtil(codetext).toscss()
     );
+    var doc=await workspace.openTextDocument(editor.document.uri.fsPath + ".scss");
+    var doc1=await window.showTextDocument(doc);
+    console.log(doc,doc1);
+    
     warn(`file:${editor.document.uri.fsPath + ".scss"} is created`);
   }
 }

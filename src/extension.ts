@@ -1,6 +1,6 @@
 import * as vscode from "vscode";
 import UIHelper from "./uihelper";
-export function activate(context: vscode.ExtensionContext) {
+export async function activate(context: vscode.ExtensionContext) {
   var uihelper=new UIHelper();
   context.subscriptions.push(
     vscode.commands.registerCommand("uihelper.html2scss", async () => {
