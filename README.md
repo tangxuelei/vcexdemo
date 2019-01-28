@@ -1,5 +1,5 @@
 # A util let you code the user interface simpleness,efficient and so on!
-- just an beta(0.0.9) version now
+- just an beta(0.0.11) version now
 - open source in the release(1.0.0) version
 # Usage
 ![usage](https://tangxuelei.github.io/use.gif "usage")
